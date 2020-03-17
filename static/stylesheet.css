@@ -1,0 +1,128 @@
+
+/* Header / Jumbotron */
+#header-banner {
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#header-banner h4 {
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+#header-logo {
+    width: 300px;
+    height: auto;
+    margin-top: 10px;
+}
+
+#header-links{
+    position: relative;
+    text-align: right;
+    margin-right: 0;
+    padding-right: 0;
+    width: 100%;
+    padding-left: 2em;
+    margin-bottom: 4em;
+}
+
+#header-links a {
+    color: black;
+    padding-left: 2em;
+    padding-bottom: 5em;
+}
+
+.socialMediaIcons {
+    max-width: 45px;
+    min-width: 15px;
+    height: auto;
+    padding: 5px;
+}
+
+#socialMediaIcons-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-top: 25px;
+    margin-top: 2em;
+}
+
+#header-right-column {
+    position: relative;
+}
+
+/* Navigation Bar */
+.nav-item {
+    margin-left: 3em;
+}
+
+/* Body / Main*/
+#body_wrapper {
+}
+
+/* Featured Body Column  */
+#featured_content {
+    text-align: center;
+    padding-top: 3em;
+}
+
+.featured-img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+#left_body_col h5 {
+    font-weight: bold;
+    padding-top: 1em;
+}
+.nav-divider {
+    display: inline-block;
+    list-style-type: none;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-right: 1px solid #000000;
+}
+
+.nav-divider:last-child {
+    border-right: none;
+}
+
+.nav-divider a {
+    color: green;
+}
+
+#right_body_col {
+    text-align: center;
+}
+
+#right_body_col h5{
+    font-weight: bold;
+    color: green;
+    padding-bottom: 2em;
+}
+
+#right_body_col p {
+    text-decoration: underline;
+    padding: 1.5em 0.0em 0.5em;
+}
+
+/* Footer */
+#footer-nav {
+    justify-content: center;
+}
+
+/* Registration Form */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,118 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- OEM Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/stylesheet.css">
+
+
+
+    <title>SolarSlabs</title>
+</head>
+<body>
+
+<!-- Header/Banner -->
+<div class="row" id="header-banner">
+    <div class="col-sm-6">
+        <a href="index.html"><img id="header-logo" src="static/SolarSlabs_logo.png" alt="header-logo"></a>
+        <h4><i>Research & Development</i></h4>
+    </div>
+    <div class="col-sm-6" id="header-right-column">
+        <div id="header-links">
+            <a href="">Abouts Us</a>
+            <a href="">Contact Us</a>
+        </div>
+        <div id="socialMediaIcons-wrapper">
+            <a href=""><img class="socialMediaIcons" src="static/Facebook.png" alt="Facebook icon"></a>
+            <a href=""><img class="socialMediaIcons" src="static/Reddit.png" alt="Reddit icon"></a>
+            <a href=""><img class="socialMediaIcons" src="static/Twitter.png" alt="Twitter icon"></a>
+            <a href=""><img class="socialMediaIcons" src="static/Linkedin.png" alt="Linkedin Icon"></a>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse align-content-center" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Racks & Trackers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">SolarSlabs Module</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">SolarSlabs Systems</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Data Analytics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cybersecurity</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+
+<!-- Main Body -->
+<div class="container-fluid" id="body_wrapper">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- Footer -->
+<div id="footer" style="padding-top: 5em">
+    <div class="row">
+        <div class="col-lg-2">
+            <img src="static/SolarSlabs_logo.png" style="max-width: 150px" alt="footerLogo">
+            <ul style="list-style-type: none">
+                <li>123 Somewhere Rd.</li>
+                <li>255-555-5555</li>
+                <li>support@SolarSlabs.com</li>
+                <li>SolarSlabs.com</li>
+            </ul>
+        </div>
+        <div class="col-lg-10" style="text-align: end;">
+            <p>SolarSlabs &copy; 2019 All Rights Reserved</p>
+        </div>
+    </div>
+    <div class="row" id="footer-nav">
+        <ul>
+            <li class="nav-divider">
+                <a href="" >Site Map</a>
+            </li>
+            <li class="nav-divider">
+                <a href="">Terms & Conditions</a>
+            </li>
+            <li class="nav-divider">
+                <a href="" >Privacy Policy</a>
+            </li>
+            <li class="nav-divider">
+                <a href="" >About Us</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- Custom JavaScript -->
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+{% extends "base_template.html" %}
+{% block content %}
+    <!-- Main Body -->
+    <div class="container-fluid" id="body_wrapper">
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- Register/log Nav -->
+                <ul>
+                    <li class="nav-divider">
+                        <button type="button" class="btn btn-outline-success" style="width: available" data-toggle="modal" data-target="#regForm_container">Registration</button>
+                    </li>
+                    <li class="nav-divider">
+                        <button type="button" class="btn btn-outline-success" style="width: available" data-toggle="modal" data-target="#regForm">Login</button>
+                    </li>
+                </ul>
+
+                <!-- Site Index Navigation -->
+                <div id="left_body_col">
+                    <h5><a href="">SolarSlabs Module</a></h5>
+                    <ul>
+                        <li>
+                            <a href="">Testing & Certification</a>
+                        </li>
+                        <li>
+                            <a href="">SolarSlabs Rating</a>
+                        </li>
+                    </ul>
+
+                    <h5><a href="">System Performance</a></h5>
+                    <ul>
+                        <li>
+                            <a href="">Monitoring & Inspection</a>
+                        </li>
+                        <li>
+                            <a href="">Performance Analysis</a>
+                        </li>
+                        <li>
+                            <a href="">Compare System</a>
+                        </li>
+                        <li>
+                            <a href="">Certifications</a>
+                        </li>
+                    </ul>
+                    <h5><a href="">Data Analytics</a></h5>
+                    <ul>
+                        <li>
+                            <a href="">Module Lifetime Predictions</a>
+                        </li>
+                        <li>
+                            <a href="">Energy Predictions</a>
+                        </li>
+                    </ul>
+                    <h5>
+                        <a href="">Cybersecurity & Smart Grid Technologies</a>
+                    </h5>
+                    <h5>
+                        <a href="">SolarSlabs University</a>
+                    </h5>
+                </div>
+            </div>
+
+            <!-- Featured Content -->
+            <div class="col-lg-6" id="featured_content">
+                <h5><i>Featured Content</i></h5>
+                <hr>
+                <img class="featured-img" src="static/SolarPanels.jpg" alt="Featured Image">
+                <p>Our new high efficiency long life panels will be available in March 2020</p>
+                <br>
+                <hr>
+                <img class="featured-img" src="static/bulb.jpg" alt="bulb">
+                <p>Innovating for a brighter future!</p>
+            </div>
+
+            <!-- News & Events Column -->
+            <div class="col-lg-3" id="right_body_col">
+                <h5>News & Events</h5>
+                <p><a href="">PhotoVoltaic Technical Conference to take place in Marseilles, France From 26th to 28th, April 2020</a></p>
+                <p><a href="">Will Trump win 2020 presidency?</a></p>
+                <p><a href="">Syrian forces recapture Aleppo</a></p>
+                <p><a href="">Impeachment Trial now in trail at the senate</a></p>
+            </div>
+        </div>
+        <!-- Registration Form -->
+        <div class="container" >
+            <!-- Modal -->
+            <div id="regForm_container" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="margin: 0 auto">
+                                Registration Form
+                            </h4>
+                            <button type="button" class="close" data-dismiss="modal" style="margin: 0 0; padding: 0">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form" name="regForm" id="regForm"  method="post" >
+                                <p> Please fill out the form below.</p>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="username">User Name</label>
+                                        <input type="text" class="form-control" id="username" name="username"
+                                               required maxlength="8" placeholder="John123">
+                                        <small id="userIdHelp" class="form-text text-muted">Required - 8 Characters or
+                                            less</small>
+                                        <div id="regForm_user_erroloc" class="error_strings"></div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password"
+                                               required maxlength="8" placeholder="Password">
+                                        <small id="passwordHelp" class="form-text text-muted">Required - 8 Character or
+                                            less, 1 lowercase, 1 digit. </small>
+                                        <div id="regForm_password_erroloc" class="error_strings"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="fName">First Name</label>
+                                        <input type="text" class="form-control" id="fName" placeholder="John">
+                                        <div id="regForm_fName_erroloc" class="error_strings"></div>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="lName">Last Name</label>
+                                        <input type="text" class="form-control" id="lName" placeholder="Doe">
+                                        <div id="regForm_lName_erroloc" class="error_strings"></div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label for="mName">Middle Name</label>
+                                        <input type="text" class="form-control" id="mName" placeholder="Smith">
+                                        <div id="regForm_mName_erroloc" class="error_strings"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="gender">Gender</label>
+                                        <select class="form-control" id="gender">
+                                            <option selected>Choose...</option>
+                                            <option value="M">Male</option>
+                                            <option value="F">Female</option>
+                                            <option value="None">Rather not say</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md">
+                                        <label for="address">Address</label>
+                                        <input type="text" class="form-control" id="address"
+                                               placeholder="1234 Main St">
+                                        <div id="regForm_address_erroloc" class="error_strings"></div>
+                                    </div>
+                                </div>
+                                <div class="from-row">
+                                    <div class="form-group col-md">
+                                        <label for="address2">Address 2</label>
+                                        <input type="text" class="form-control" id="address2"
+                                               placeholder="Apartment, studio, or floor">
+                                        <div id="regForm_address2_erroloc" class="error_strings"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" id="city" placeholder="New York">
+                                        <div id="regForm_city_erroloc" class="error_strings"></div>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="state">State</label>
+                                        <select id="state" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AK">AK</option>
+                                            <option value="AR">AR</option>
+                                            <option value="AZ">AZ</option>
+                                            <option value="CA">CA</option>
+                                            <option value="CO">CO</option>
+                                            <option value="CT">CT</option>
+                                            <option value="DC">DC</option>
+                                            <option value="DE">DE</option>
+                                            <option value="FL">FL</option>
+                                            <option value="GA">GA</option>
+                                            <option value="HI">HI</option>
+                                            <option value="IA">IA</option>
+                                            <option value="ID">ID</option>
+                                            <option value="IL">IL</option>
+                                            <option value="IN">IN</option>
+                                            <option value="KS">KS</option>
+                                            <option value="KY">KY</option>
+                                            <option value="LA">LA</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MD">MD</option>
+                                            <option value="ME">ME</option>
+                                            <option value="MI">MI</option>
+                                            <option value="MN">MN</option>
+                                            <option value="MO">MO</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MT">MT</option>
+                                            <option value="NC">NC</option>
+                                            <option value="NE">NE</option>
+                                            <option value="NH">NH</option>
+                                            <option value="NJ">NJ</option>
+                                            <option value="NM">NM</option>
+                                            <option value="NV">NV</option>
+                                            <option value="NY">NY</option>
+                                            <option value="ND">ND</option>
+                                            <option value="OH">OH</option>
+                                            <option value="OK">OK</option>
+                                            <option value="OR">OR</option>
+                                            <option value="PA">PA</option>
+                                            <option value="RI">RI</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SD">SD</option>
+                                            <option value="TN">TN</option>
+                                            <option value="TX">TX</option>
+                                            <option value="UT">UT</option>
+                                            <option value="VT">VT</option>
+                                            <option value="VA">VA</option>
+                                            <option value="WA">WA</option>
+                                            <option value="WI">WI</option>
+                                            <option value="WV">WV</option>
+                                            <option value="WY">WY</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="zip">Zip</label>
+                                        <input type="text" class="form-control" id="zip" placeholder="77777">
+                                        <div id="regForm_zip_erroloc" class="error_strings"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                               placeholder="JohnDoe@mail.com">
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your
+                                            email with anyone.</small>
+                                        <div id="regForm_email_erroloc" class="error_strings"></div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="phoneNumber">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phoneNumber"
+                                               placeholder="555-555-5555">
+                                        <small id="numberHelp" class="form-text text-muted">We'll never share your
+                                            number with anyone.</small>
+                                        <div id="regForm_phoneNumber_erroloc" class="error_strings"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="company">Company</label>
+                                        <input type="text" class="form-control" id="company"
+                                               placeholder="YourCompanyName">
+                                        <div id="regForm_company_erroloc" class="error_strings"></div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-lg btn-success btn-block" name="submit" id="submit" value="Submit" form="regForm">Submit
+                                    &rarr;</button>
+                            </form>
+                            <div id="success_message" style="width:100%; height:100%; display:none; ">
+                                <h3>Registration Successful!</h3>
+                            </div>
+                            <div id="error_message" style="width:100%; height:100%; display:none; ">
+                                <h3>Error</h3> Sorry there was an error sending your form.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+{% endblock %}
