@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb45fb5-72d6-436c-8d49-9b1ca3d8e5a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/manufacturer_registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/submit_success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/productRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/productRegistration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +29,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jared@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jared@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jared@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="solarpv: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jared@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="solarpv: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="product: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -32,8 +61,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -116,7 +145,7 @@
       <workItem from="1583464838413" duration="7519000" />
       <workItem from="1583517606979" duration="6230000" />
       <workItem from="1583525173274" duration="7768000" />
-      <workItem from="1584373994528" duration="21588000" />
+      <workItem from="1584373994528" duration="30972000" />
     </task>
     <servers />
   </component>
@@ -152,6 +181,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2505" height="387" key="GridCell.Tab.0.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584414906549" />
+    <state width="236" height="549" key="HiddenNamespacesPopup" timestamp="1584551547276">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="236" height="549" key="HiddenNamespacesPopup/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584551547276" />
     <state x="672" y="257" key="SettingsEditor" timestamp="1583541596557">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -164,5 +197,9 @@
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-1287" y="0" width="1294" height="1407" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584379239173" />
+    <state x="-1047" y="0" width="1063" height="1036" key="dock-window-2" timestamp="1584558139927">
+      <screen x="-2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1047" y="0" width="1063" height="1036" key="dock-window-2/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584558139927" />
   </component>
 </project>
