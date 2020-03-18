@@ -1,0 +1,254 @@
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Manufacturer">Manufacturer</label>
+                <input type="text" class="form-control" id="Manufacturer" name="Manufacturer">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Location">Location</label>
+                <input type="text" class="form-control" id="Location" name="Location">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Contact">Contact</label>
+                <input type="text" class="form-control" id="Contact" name="Contact">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Address">Address</label>
+                <input type="text" class="form-control" id="Address" name="Address">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Phone">Phone</label>
+                <input type="text" class="form-control" id="Phone" name="Phone">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Model Number">Model Number</label>
+                <input type="text" class="form-control" id="Model Number" name="Model number">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Module Length">Module length</label>
+                <input type="text" class="form-control" id="Model length" name="Model length" placeholder="cm">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Module Width">Module width</label>
+                <input type="text" class="form-control" id="Module width" name="Model width" placeholder="cm">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Module weight">Module Weight</label>
+                <input type="text" class="form-control" id="Module weight" name="Module weight" placeholder="kg">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Individual Cell Area">User Name</label>
+                <input type="text" class="form-control" id="inputusername" name="Cell area" placeholder="cm^2">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Cell technology">Cell technology</label>
+                <input type="text" class="form-control" id="Cell technology" name="Cell technology" placeholder="mono-Si, poly-Si, a-Si, CIS, CdTe, etc">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Cell manufacturer">Cell manufacturer</label>
+                <input type="text" class="form-control" id="Cell manufacturer" name="Cell manufacturer">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Cell manufacturing location">Cell manufacturing location</label>
+                <input type="text" class="form-control" id="Cell manufacturer location" name="Cell manufacturing location">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Total number of cells">Total number of cells</label>
+                <input type="number" class="form-control" id="Total number of cells" min="0" name="Total number of cells">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Number of cells in series">Number of cells in series</label>
+                <input type="number" class="form-control" id="Number of cells in series" name="number of cells in series">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Number of series strings">Number of series strings</label>
+                <input type="number" class="form-control" id="Number of series strings" name="Number of series strings" min="0" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="number of bypass diodes">number of bypass diodes</label>
+                <input type="number" class="form-control" id="number of bypass diodes" name="Number of bypass diodes" min="0" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Bypass diode Rating">Bypass diode Rating</label>
+                <input type="number" class="form-control" id="Bypass diode Rating" name="Bypass diode rating" min="0" placeholder="amps">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Bypass diode max junction temperature ">Bypass diode max junction temperature </label>
+                <input type="number" class="form-control" id="Bypass diode max junction temperature "
+                       name="Bypass diode max junction temperature" min="0" placeholder="°C">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Series fuse rating">Series fuse rating</label>
+                <input type="text" class="form-control" id="Series fuse rating" name="Series fuse rating" placeholder="amps">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Interconnect material">Interconnect material</label>
+                <input type="text" class="form-control" id="Interconnect material" name="Interconnect material" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Interconnect dimensions">Interconnect dimensions</label>
+                <input type="text" class="form-control" id="Interconnect dimensions" name="Interconnect dimensions" placeholder="mm x mm">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Substrate type">Substrate type</label>
+                <input type="text" class="form-control" id="Substrate type" name="Substrate tpe" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Substrate manufacturer">Substrate manufacturer</label>
+                <input type="text" class="form-control" id="Substrate manufacturer" name="Substrate manufacturer" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Frame type/material">Frame type/material</label>
+                <input type="text" class="form-control" id="Frame type/material" name="Frame material" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Frame adhesive">Frame adhesive</label>
+                <input type="text" class="form-control" id="Frame adhesive" name="Frame adhesive" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Encapsulant type">Encapsulant type</label>
+                <input type="text" class="form-control" id="Encapsulant type" name="Encapsulant type" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Encapsulant manufacturer">Encapsulant manufacturer</label>
+                <input type="text" class="form-control" id="Encapsulant manufacturer" name="Encapsulant manufacturer" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Junction box type">Junction box type</label>
+                <input type="text" class="form-control" id="Junction box type" name="Junction box type" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Junction box manufacturer">Junction box manufacturer</label>
+                <input type="text" class="form-control" id="Junction box manufacturer" name="Junction box manufacturer" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Junction box potting material">Junction box potting material</label>
+                <input type="text" class="form-control" id="Junction box potting material" name="Junction box potting material" placeholder="NA if not applicable">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Junction box intended for use with conduit">Junction box intended for use with conduit</label>
+                <input type="text" class="form-control" id="Junction box intended for use with conduit" name="Junction box intended use" placeholder="NA if not applicable">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Cable type">Cable type</label>
+                <input type="text" class="form-control" id="Cable type" name="Cable type" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Connector type">Connector type</label>
+                <input type="text" class="form-control" id="Connector type" name="Connector type" placeholder="">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Max system voltage">Max system voltage</label>
+                <input type="number" class="form-control" id="Max system voltage" name="Max system voltage" min="0"  placeholder="volts">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Voc">Voc</label>
+                <input type="number" class="form-control" id="Voc" name="Voc" min="0" placeholder="volts">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Isc">Isc</label>
+                <input type="number" class="form-control" id="Isc" name="Isc" min="0" placeholder="amps">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Vmp">Vmp</label>
+                <input type="number" class="form-control" id="Vmp" name="Vmp" min="0" placeholder="volts">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Imp">Imp</label>
+                <input type="number" class="form-control" id="Imp" name="Imp" min="0" placeholder="amps">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Pmp">Pmp</label>
+                <input type="number" class="form-control" id="Pmp" name="Pmp" min="0" placeholder="watts">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="FF">FF</label>
+                <input type="number" class="form-control" id="FF" name="FF" min="0" placeholder="percent">
+            </div>
+        </div

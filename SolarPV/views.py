@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import ProductRegistration
 # Create your views here.
 
 
@@ -8,8 +9,8 @@ def index(request):
 
 
 def registerProduct(request):
-    user_input = request.POST
-    user_input.get('Manufacturer')
-    return render(request, 'productRegistration.html')
+    product_form = ProductRegistration(request.POST or None)
+    context = {"product_form": product_form}
+    return render(request, 'productRegistration.html', context)
 
 
