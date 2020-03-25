@@ -4,7 +4,12 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('index', views.index, name='index'),
     path('register_product', views.registerProduct, name="register product"),
-    path('submit_success', views.submit_success, name="submit_success"),
-    path('manufacturer_registration', views.registerManufacturer, name='register manufacturer')
+    path('submit_success', views.submit_success, name="submit success"),
+    path('manufacturer_registration', views.registerManufacturer, name='register manufacturer'),
+    path('register_user', views.registerUser, name="register user"),
+    path('user_login', views.user_login, name='user login'),
+    path('user_portal', views.user_portal, name='user portal'),
+    path('upload_data', views.upload_test, name="upload_test")
 ]

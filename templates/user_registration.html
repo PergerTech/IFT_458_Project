@@ -5,11 +5,10 @@
 <br>
 <div id="form-wrapper" class="container">
     <br>
-    <h1>Manufacturer Registration</h1>
+    <h1>User Registration</h1>
     <hr/>
-    <form name="Manufacturer form" action="" method="POST">
-        {% csrf_token %}
-        {{ manufacturer_form.as_p }}
+    <form name="user_form" action="" method="post">
+        {{ user_from.as_p }}
         <button type="submit" class="btn btn-primary" value="OK">Submit</button>
     </form>
 </div>

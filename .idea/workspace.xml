@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb45fb5-72d6-436c-8d49-9b1ca3d8e5a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/manufacturer_registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/submit_success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/upload_testdata.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user_login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user_portal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user_registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFT458_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/IFT458_Project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/migrations/0002_auto_20200318_1346.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/productRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/productRegistration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scratch" beforeDir="false" afterPath="$PROJECT_DIR$/scratch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/manufacturer_registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manufacturer_registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/submit_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/submit_success.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,24 +43,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="jared@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="jared@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="jared@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="solarpv: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="jared@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="solarpv: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="product: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -81,17 +73,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../IFT360/Mod4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Bias-Detection-Project" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Programing_workspace\IFT458\IFT458_Project" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Programing_workspace\IFT458\IFT458_Project" />
       <recent name="C:\Programing_workspace\IFT458\IFT458_Project\static" />
       <recent name="C:\Programing_workspace\IFT458\IFT458_Project\SolarPV\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programing_workspace\IFT458\IFT458_Project" />
     </key>
   </component>
   <component name="RunManager">
@@ -145,7 +137,9 @@
       <workItem from="1583464838413" duration="7519000" />
       <workItem from="1583517606979" duration="6230000" />
       <workItem from="1583525173274" duration="7768000" />
-      <workItem from="1584373994528" duration="30972000" />
+      <workItem from="1584373994528" duration="44376000" />
+      <workItem from="1584580903406" duration="44689000" />
+      <workItem from="1585095171407" duration="1413000" />
     </task>
     <servers />
   </component>
@@ -161,26 +155,26 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="881" y="485" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584473496332" />
-    <state x="1010" y="398" key="FileChooserDialogImpl" timestamp="1584457635677">
+    <state x="1010" y="398" key="FileChooserDialogImpl" timestamp="1584651938451">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1010" y="398" key="FileChooserDialogImpl/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584457635677" />
-    <state width="2505" height="387" key="GridCell.Tab.0.bottom" timestamp="1584414906549">
+    <state x="1010" y="398" key="FileChooserDialogImpl/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584651938451" />
+    <state width="2505" height="387" key="GridCell.Tab.0.bottom" timestamp="1584580838257">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="387" key="GridCell.Tab.0.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584414906549" />
-    <state width="2505" height="387" key="GridCell.Tab.0.center" timestamp="1584414906549">
+    <state width="2505" height="387" key="GridCell.Tab.0.bottom/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584580838257" />
+    <state width="2505" height="387" key="GridCell.Tab.0.center" timestamp="1584580838256">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="387" key="GridCell.Tab.0.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584414906549" />
-    <state width="2505" height="387" key="GridCell.Tab.0.left" timestamp="1584414906548">
+    <state width="2505" height="387" key="GridCell.Tab.0.center/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584580838256" />
+    <state width="2505" height="387" key="GridCell.Tab.0.left" timestamp="1584580838256">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="387" key="GridCell.Tab.0.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584414906548" />
-    <state width="2505" height="387" key="GridCell.Tab.0.right" timestamp="1584414906549">
+    <state width="2505" height="387" key="GridCell.Tab.0.left/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584580838256" />
+    <state width="2505" height="387" key="GridCell.Tab.0.right" timestamp="1584580838257">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2505" height="387" key="GridCell.Tab.0.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584414906549" />
+    <state width="2505" height="387" key="GridCell.Tab.0.right/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584580838257" />
     <state width="236" height="549" key="HiddenNamespacesPopup" timestamp="1584551547276">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -189,17 +183,32 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="672" y="257" key="SettingsEditor/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1583541596557" />
-    <state x="911" y="482" key="com.intellij.ide.util.TipDialog" timestamp="1584374044942">
+    <state x="911" y="482" key="com.intellij.ide.util.TipDialog" timestamp="1585095274268">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="911" y="482" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584374044942" />
-    <state x="-1287" y="0" width="1294" height="1407" key="dock-window-1" timestamp="1584379239173">
+    <state x="911" y="482" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1585095274268" />
+    <state x="147" y="280" width="1882" height="755" key="dock-window-1" timestamp="1584932094753">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="147" y="280" width="1882" height="755" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584932094753" />
+    <state x="-1287" y="0" width="1294" height="1407" key="dock-window-2" timestamp="1584637829009">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1287" y="0" width="1294" height="1407" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584379239173" />
-    <state x="-1047" y="0" width="1063" height="1036" key="dock-window-2" timestamp="1584558139927">
-      <screen x="-2560" y="0" width="2560" height="1400" />
+    <state x="-1287" y="0" width="1294" height="1407" key="dock-window-2/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584637829009" />
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1584748354442">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1047" y="0" width="1063" height="1036" key="dock-window-2/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584558139927" />
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584748354442" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/user_portal.html</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

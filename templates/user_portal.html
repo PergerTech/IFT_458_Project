@@ -1,0 +1,15 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+    <!-- Registration Form -->
+    <br>
+    <div id="form-wrapper" class="container">
+        <br>
+        <h1>User Portal</h1>
+        <hr/>
+        <a href="{% url "register product" %}" class="button btn btn-success" >Register Product</a>
+        <a href="{% url "register manufacturer" %}" class="button btn btn-success" >Register Manufacturer</a>
+        <a href="" class="button btn btn-success" >Upload PV Test</a>
+
+    </div>
+{% endblock %}

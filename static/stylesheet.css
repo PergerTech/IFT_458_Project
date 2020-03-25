@@ -113,6 +113,12 @@
 /* Footer */
 #footer-nav {
     justify-content: center;
+
+}
+
+#footer {
+    position: static;
+    bottom: 0;
 }
 
 /* Registration Form */
