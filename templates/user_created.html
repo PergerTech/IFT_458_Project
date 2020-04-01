@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base_template.html' %}
+{% block title %}User Created{% endblock %}
+{% block content %}
+    <div>
+        <p style='color:#092E20;font-size:25px;font-weight:bold;padding-top:20px;padding-left:15px;'>
+            User profile successfully created....
+        </p>
+        <p>Redirecting to login page.....</p>
+    </div>
 
-</body>
-</html>
+    <!--2 second timed redirect -->
+    <script>
+        function redirect(){
+            window.location.href = "user_login";
+        }
+
+        setTimeout(redirect, 2000); //2000 is equivalent to 2 seconds
+    </script>
+{% endblock %}

@@ -3,10 +3,10 @@ from django.http import HttpResponseRedirect
 from .forms import *
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
 import csv, io
 from datetime import datetime
-import math
 
 from SolarPV.models import Testresults, Product
 
@@ -35,6 +35,7 @@ def user_login(request):
     return render(request, "user_login.html", {"form": form})
 
 
+@login_required
 def user_portal(request):
     return render(request, 'user_portal.html', {})
 
@@ -42,18 +43,26 @@ def user_portal(request):
 def registerUser(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
-        if form.is_valid():
+        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        if form.is_valid() and profile_form.is_valid():
             form.save()
+            profile_form.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('user login')
+            return redirect('user created')
     else:
         form = SignUpForm()
-    return render(request, 'user_registration.html', {'form': form})
+        profile_form = ProfileForm()
+    return render(request, 'user_registration.html', {'form': form, 'profile_form': profile_form})
 
 
+def userCreated(request):
+    return render(request, 'user_created.html', {})
+
+
+@login_required
 def registerProduct(request):
     if request.method == 'POST':
         product_form = ProductRegistration(request.POST or None)
@@ -66,6 +75,7 @@ def registerProduct(request):
     return render(request, 'productRegistration.html', context)
 
 
+@login_required
 def registerManufacturer(request):
     if request.method == 'POST':
         manufacturer_form = ManufacturerRegistration(request.POST or None)
@@ -82,6 +92,7 @@ def submit_success(request):
     return render(request, 'submit_success.html')
 
 
+@login_required
 def upload_csv(request):
     template = 'upload_csv.html'
 

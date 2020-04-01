@@ -9,8 +9,19 @@
         <hr/>
         <form name="user_form" action="" method="post">
             {% csrf_token %}
-            {% csrf_token %}
-            {% for field in form %}
+            {% for field in form  %}
+                <p>
+                    {{ field.label_tag }}<br>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small style="color: grey">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                </p>
+            {% endfor %}
+            {% for field in profile_form  %}
                 <p>
                     {{ field.label_tag }}<br>
                     {{ field }}
