@@ -1,7 +1,8 @@
-from django.forms import ModelForm, forms
+from django.forms import ModelForm
 from SolarPV import models
 from django.contrib.auth.models import User
-import io, csv
+from django.contrib.auth.forms import UserCreationForm
+from django import forms
 
 
 class ProductRegistration(ModelForm):
@@ -16,14 +17,29 @@ class ManufacturerRegistration(ModelForm):
         fields = '__all__'
 
 
-class UserRegistration(ModelForm):
+class SignUpForm(UserCreationForm):
+    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
+
     class Meta:
-        model = models.User
-        fields = '__all__'
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
+
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = models.Profile
+        fields = ('address', 'office_phone', 'cell_phone')
 
 
 class UserLogin(ModelForm):
     class Meta:
         fields = ['username', 'password']
 
+
+class TestData(ModelForm):
+    class Meta:
+        model = models.Testresults
+        fields = "__all__"
 

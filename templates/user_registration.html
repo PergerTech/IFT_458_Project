@@ -1,15 +1,28 @@
 {% extends "base_template.html" %}
 
 {% block content %}
-<!-- Registration Form -->
-<br>
-<div id="form-wrapper" class="container">
+    <!-- Registration Form -->
     <br>
-    <h1>User Registration</h1>
-    <hr/>
-    <form name="user_form" action="" method="post">
-        {{ user_from.as_p }}
-        <button type="submit" class="btn btn-primary" value="OK">Submit</button>
-    </form>
-</div>
+    <div id="form-wrapper" class="container">
+        <br>
+        <h1>User Registration</h1>
+        <hr/>
+        <form name="user_form" action="" method="post">
+            {% csrf_token %}
+            {% csrf_token %}
+            {% for field in form %}
+                <p>
+                    {{ field.label_tag }}<br>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small style="color: grey">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                </p>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary" value="OK">Submit</button>
+        </form>
+    </div>
 {% endblock %}

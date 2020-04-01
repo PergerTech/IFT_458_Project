@@ -7,6 +7,9 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 from django.conf import settings
+from django.contrib.auth.models import User
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 
 user = settings.AUTH_USER_MODEL
 
@@ -27,8 +30,8 @@ class Manufacturer(models.Model):
 
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
-    model_number = models.CharField(max_length=45)
-    manufacturing_date = models.CharField(unique=True, max_length=8)
+    model_number = models.CharField(max_length=45, unique=True)
+    manufacturing_date = models.CharField(unique=False, max_length=8)
     length = models.FloatField(blank=True, null=True)
     width = models.FloatField(blank=True, null=True)
     weight = models.FloatField(blank=True, null=True)
@@ -59,7 +62,7 @@ class Product(models.Model):
     rated_imp = models.FloatField(blank=True, null=True)
     rated_pmp = models.FloatField(blank=True, null=True)
     rated_ff = models.FloatField(blank=True, null=True)
-    manufacturer = models.CharField(max_length=45, blank=True, null=True)
+    manufacturer = models.ForeignKey('Manufacturer', on_delete=models.DO_NOTHING,  default=1)
 
     class Meta:
         
@@ -86,7 +89,7 @@ class Testlab(models.Model):
 class Testresults(models.Model):
     testresults_id = models.AutoField(primary_key=True)
     report_condition = models.CharField(max_length=255, blank=True, null=True)
-    test_squence = models.CharField(max_length=255, blank=True, null=True)
+    test_sequence = models.CharField(max_length=255, blank=True, null=True)
     test_date = models.DateField(blank=True, null=True)
     isc = models.FloatField(blank=True, null=True)
     voc = models.FloatField(blank=True, null=True)
@@ -103,20 +106,17 @@ class Testresults(models.Model):
         db_table = 'testresutls'
 
 
-class User(models.Model):
-    user_id = models.AutoField(primary_key=True)
-    username = models.CharField(unique=True, max_length=50)
-    password = models.CharField(max_length=255, blank=True, null=True)
-    first_name = models.CharField(max_length=45, blank=True, null=True)
-    last_name = models.CharField(max_length=45, blank=True, null=True)
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     address = models.CharField(max_length=100, blank=True, null=True)
     office_phone = models.CharField(max_length=15, blank=True, null=True)
     cell_phone = models.CharField(max_length=15, blank=True, null=True)
-    email = models.CharField(max_length=100, blank=True, null=True)
 
-    class Meta:
-        
-        db_table = 'user'
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
 
-    def __str__(self):
-        return self.first_name + " " + self.last_name
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()

@@ -1,21 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from .forms import *
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 import csv, io
+from datetime import datetime
+import math
+
+from SolarPV.models import Testresults, Product
 
 
 def index(request):
-    if request.method == 'post':
-        user_form = UserRegistration(request.POST or None)
-        if user_form.is_valid():
-            return HttpResponseRedirect('/submit_success')
-    else:
-        user_form = UserRegistration()
-
-    return render(request, 'index.html', {'user_form': user_form})
+    context = {}
+    return render(request, 'index.html', context)
 
 
 def user_login(request):
@@ -42,13 +40,18 @@ def user_portal(request):
 
 
 def registerUser(request):
-    if request.method == 'post':
-        user_form = UserRegistration(request.POST or None)
-        if user_form.is_valid():
-            return HttpResponseRedirect('/submit_success')
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('user login')
     else:
-        user_form = UserRegistration()
-    return render(request, 'user_registration.html', {'user_from': user_form})
+        form = SignUpForm()
+    return render(request, 'user_registration.html', {'form': form})
 
 
 def registerProduct(request):
@@ -79,21 +82,54 @@ def submit_success(request):
     return render(request, 'submit_success.html')
 
 
-def upload_test(request):
-    data = models.Testresults.objects.all()
+def upload_csv(request):
+    template = 'upload_csv.html'
+
     prompt = {
-        'order':
-            'Order of the CSV should be, Model Number, Test Sequence, Condition, Date, Isc, Voc, Imp, Vmp, FF, Pmp NOCT '
+        'order': "Oder of CSV should be ..."
     }
-    if request.method == "POST":
-        return render(request, 'upload_testdata.html', prompt)
+    # Return input view to user
+    if request.method == "GET":
+        return render(request, template, prompt)
 
-    # take in CSV file from request
-    csv_file = request.FILES['file']
+    csv_file = request.FILES['csv_file']
 
-    # check if is CVS file
     if not csv_file.name.endswith('.csv'):
-        messages.error(request, "File select is not a CSV file!")
+        messages.error(request, "This is not a csv file")
+        return HttpResponseRedirect('upload test')
+    else:
+        dataset = csv_file.read().decode('UTF-8')
+        io_string = io.StringIO(dataset)
+        next(io_string)
+        for column in csv.reader(io_string, delimiter=",", quotechar="|"):
+            date_object = datetime.strptime(column[3], '%m/%d/%Y').strftime('%Y-%m-%d')
 
-    data_set = csv_file.r
-    return render(request, 'upload_testdata.html', context)
+            product_id = Product.objects.get(model_number=column[0])
+
+            noct_column = column[10]
+            try:
+                float(noct_column)
+            except:
+                noct_column = None
+
+            _, created = Testresults.objects.update_or_create(
+                product=product_id,
+                test_sequence=column[1],
+                report_condition=column[2],
+                test_date=date_object,
+                isc=column[4],
+                voc=column[5],
+                imp=column[6],
+                vmp=column[7],
+                ff=column[8],
+                pmp=column[9],
+                noct=noct_column
+            )
+        context = {}
+        return render(request, 'submit_success.html', context)
+
+
+
+
+
+

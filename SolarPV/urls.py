@@ -11,5 +11,5 @@ urlpatterns = [
     path('register_user', views.registerUser, name="register user"),
     path('user_login', views.user_login, name='user login'),
     path('user_portal', views.user_portal, name='user portal'),
-    path('upload_data', views.upload_test, name="upload_test")
-]
+    path('upload_test', views.upload_csv, name='upload test')
+    ]
