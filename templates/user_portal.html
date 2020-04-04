@@ -7,9 +7,64 @@
         <br>
         <h1>User Portal</h1>
         <hr/>
-        <a href="{% url "register product" %}" class="button btn btn-success" >Register Product</a>
-        <a href="{% url "register manufacturer" %}" class="button btn btn-success" >Register Manufacturer</a>
-        <a href="{% url 'upload test' %}" class="button btn btn-success" >Upload PV Test</a>
+        <div class="row">
+            <div class="col-lg-3" style="padding-right: 50px">
+                <img src="/static/profiel_placeholder.jpg", alt="profile placeholder" style="padding-bottom: 20px">
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12"><u>Contact Information</u></div>
+                </div>
+                <div class="row">
+                    <div class="col-4">Email:</div>
+                    <div class="col-8">{{ email }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-4">Cell Phone:</div>
+                    <div class="col-8">{{ cell }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-4">Office Phone:</div>
+                    <div class="col-8">{{ office }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-4">Address:</div>
+                    <div class="col-8">{{ address }}</div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="row" style="padding-top: 10px">
+                    <a href="{% url "register product" %}" class="button btn btn-success" >Register Product</a>
+                </div>
+                <div class="row" style="padding-top: 10px">
+                    <a href="{% url "register manufacturer" %}" class="button btn btn-success" >Register Manufacturer</a>
+                </div>
+                <div class="row" style="padding-top: 10px; padding-bottom: 10px">
+                    <a href="{% url 'upload test' %}" class="button btn btn-success" >Upload PV Test</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-sm-6">Username: </div>
+            <div class="col-2-sm-6" style="padding-left: 10px">{{ username }}</div>
+        </div>
+        <div class="row">
+            <div class="col-1-sm-6">Name: </div>
+            <div class="col-2-sm-6" style="padding-left: 10px">{{ first_name }} {{ last_name }}</div>
+        </div>
+        <br>
+
+
+        <hr/>
+        <h4><u>Registered Products</u></h4>
+        <div id="reg-product-table" style="margin-left: 25px">
+            {% for p in products %}
+                <div class="row">
+                    <a href="{% url "product view" p.pk %}">{{ p }}</a>
+                </div>
+            {% endfor %}
+        </div>
 
     </div>
 {% endblock %}

@@ -18,7 +18,7 @@ class Manufacturer(models.Model):
     manufacturer_id = models.AutoField(primary_key=True)
     company_name = models.CharField(unique=True, max_length=50)
     registered_country = models.CharField(max_length=50, blank=True, null=True)
-    contact_person = models.ForeignKey(user, on_delete=models.SET_NULL, null=True, default=None)
+    contact_person = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, default=None)
 
     class Meta:
         
@@ -76,7 +76,7 @@ class Testlab(models.Model):
     testlab_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=45)
     address = models.CharField(max_length=100)
-    contact_person = models.ForeignKey(user, models.DO_NOTHING, db_column='contact_person', blank=True, null=True)
+    contact_person = models.ForeignKey(User, models.DO_NOTHING, db_column='contact_person', blank=True, null=True)
 
     class Meta:
         

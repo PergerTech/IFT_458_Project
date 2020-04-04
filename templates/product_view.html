@@ -1,0 +1,48 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+    <div class="container" id="product-wrapper">
+        <br>
+        <h3>Model: {{ product_model }}</h3>
+        <hr/>
+        <div class="row">
+            <div class="col-sm-3">Manufacture</div>
+            <div class="col-sm-9">{{ manufacturer }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">Contact Person</div>
+            <div class="col-sm-9">{{ contact_person }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">Contact Email</div>
+            <div class="col-sm-9">{{ contact_email }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">Cell Technology</div>
+            <div class="col-sm-9">{{ cell_technology }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">Rated Power</div>
+            <div class="col-sm-9">{{ manufacturer }}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="row" style="background: lightgreen">Test Sequence</div>
+                <div class="row">Average Isc</div>
+                <div class="row">Average Voc</div>
+                <div class="row">Average Pmax</div>
+                <div class="row">Average Vmp</div>
+            </div>
+            {% for row in test_data %}
+                <div class="col-sm-2">
+                    <div class="row" style="background: lightgreen"><strong>{{ row.test_sequence }}</strong></div>
+                    <div class="row">{{ row.voc }}</div>
+                    <div class="row">{{ row.pmp }}</div>
+                    <div class="row">{{ row.vmp }}</div>
+                    <div class="row">{{ row.vmp }}</div>
+
+                </div>
+            {% endfor %}
+        </div>
+
+{% endblock %}

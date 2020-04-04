@@ -12,5 +12,6 @@ urlpatterns = [
     path('user_login', views.user_login, name='user login'),
     path('user_portal', views.user_portal, name='user portal'),
     path('upload_test', views.upload_csv, name='upload test'),
-    path('user_created', views.userCreated, name='user created')
+    path('user_created', views.userCreated, name='user created'),
+    path('product/<int:product_id>', views.product, name='product view'),
     ]

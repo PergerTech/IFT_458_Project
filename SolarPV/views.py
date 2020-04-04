@@ -7,6 +7,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 import csv, io
 from datetime import datetime
+from SolarPV import models
 
 from SolarPV.models import Testresults, Product
 
@@ -37,7 +38,18 @@ def user_login(request):
 
 @login_required
 def user_portal(request):
-    return render(request, 'user_portal.html', {})
+    products = Product.objects.filter(manufacturer__contact_person__username= request.user.username)
+    context = {
+        'username': request.user.username,
+        'first_name': request.user.first_name,
+        'last_name': request.user.last_name,
+        'email': request.user.email,
+        'cell': request.user.profile.cell_phone,
+        'office': request.user.profile.office_phone,
+        'address': request.user.profile.address,
+        'products': products
+    }
+    return render(request, 'user_portal.html', context)
 
 
 def registerUser(request):
@@ -90,6 +102,25 @@ def registerManufacturer(request):
 
 def submit_success(request):
     return render(request, 'submit_success.html')
+
+
+def product(request, product_id):
+
+    product_data = models.Product.objects.select_related('manufacturer').get(pk=product_id)
+    test_data = models.Testresults.objects.all().filter(product=product_id)
+    # test_data_tc200 = test_data.get(test_sequence__contains="TC200")
+    # test_data_dampheat = test_data.get(test_sequence__contains="Damp Heat")
+    # test_data_hf10 = test_data.get(test_sequence__contains="HF10")
+
+    context = {
+        "product_model": product_data.model_number,
+        "manufacturer": product_data.manufacturer.company_name,
+        "contact_person": product_data.manufacturer.contact_person.first_name + " " + product_data.manufacturer.contact_person.last_name,
+        "contact_email": product_data.manufacturer.contact_person.email,
+        "cell_technology": product_data.cell_technology,
+        "test_data": test_data
+    }
+    return render(request, 'product_view.html', context)
 
 
 @login_required

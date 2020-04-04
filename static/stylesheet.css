@@ -132,3 +132,30 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+/* Product Table */
+#product-wrapper > .row {
+    border-bottom: 1px solid black;
+}
+
+#product-wrapper > .row > div {
+    border-right: 1px solid black;
+}
+
+#product-wrapper > .row:last-child {
+    border-bottom: 0;
+}
+
+#product-wrapper > .row > div > .row {
+    border-bottom: 1px solid black;
+    padding-left: 15px;
+}
+
+/*!* user profile portal*!*/
+/*#form-wrapper > .row > div > div{*/
+/*    padding-left: 5%;*/
+/*}*/
+
+
+
+
