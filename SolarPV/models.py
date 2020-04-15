@@ -1,15 +1,8 @@
-# This is an auto-generated Django model module.
-# You'll have to do the following manually to clean this up:
-#   * Rearrange models' order
-#   * Make sure each model has one field with primary_key=True
-#   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
-#   * Remove `` lines if you wish to allow Django to create, modify, and delete the table
-# Feel free to rename the models, but don't rename db_table values or field names.
+
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
-from django.dispatch import receiver
-from django.db.models.signals import post_save
+from phone_field.models import PhoneField
 
 user = settings.AUTH_USER_MODEL
 
@@ -109,14 +102,71 @@ class Testresults(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     address = models.CharField(max_length=100, blank=True, null=True)
-    office_phone = models.CharField(max_length=15, blank=True, null=True)
-    cell_phone = models.CharField(max_length=15, blank=True, null=True)
+    office_phone = PhoneField(blank=True, help_text='Office contact number')
+    cell_phone = PhoneField(blank=True, help_text='Cell contact number')
 
-    @receiver(post_save, sender=User)
-    def create_user_profile(sender, instance, created, **kwargs):
-        if created:
-            Profile.objects.create(user=instance)
+    def __str__(self):
+        return self.user.username
 
-    @receiver(post_save, sender=User)
-    def save_user_profile(sender, instance, **kwargs):
-        instance.profile.save()
+
+class Client(models.Model):
+    choices = [('bad', 'bad client'), ('good', 'good client'), ('good client', 'really good client'), ('bad client', 'really bad client')]
+    client_id = models.AutoField(primary_key=True)
+    client_name = models.CharField(null=True, blank=True, max_length=100)
+    client_type = models.CharField(max_length=30, choices=choices, default='good client')
+
+    def __str__(self):
+        return self.client_name
+
+
+class Location(models.Model):
+    location_id = models.AutoField(primary_key=True, )
+    address1 = models.CharField(blank=True, null=True, max_length=100)
+    address2 = models.CharField(blank=True, null=True, max_length=100)
+    city = models.CharField(blank=True, null=True, max_length=50)
+    state = models.CharField(blank=True, null=True, max_length=50)
+    postal_code = models.CharField(max_length=5, default=77777)
+    country = models.CharField(blank=True, null=True, max_length=50)
+    phone_number = PhoneField(blank=True, null=True)
+    fax_number = PhoneField(blank=True, null=True)
+    client = models.ForeignKey(Client, on_delete=models.DO_NOTHING, null=True, related_name='client')
+
+    def __str__(self):
+        return self.address1 + ', ' + self.city + ', ' + self.state
+
+    def __unicode__(self):
+        return self.address1 + ', ' + self.city + ', ' + self.state
+
+
+class Standard(models.Model):
+    standard_id = models.AutoField(primary_key=True)
+    standard_name = models.CharField(max_length=100, null=True)
+    description = models.CharField(max_length=200, null=True)
+    published_date = models.DateField()
+
+    def __str__(self):
+        return self.standard_name
+
+
+class Service(models.Model):
+    service_id = models.AutoField(primary_key=True)
+    description = models.CharField(max_length=200, null=True)
+    is_FI_required = models.BooleanField(default=False)
+    FI_frequency = models.FloatField(null=True, max_length=10)
+    standard = models.ForeignKey(Standard, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.service_id
+
+
+class Certificate(models.Model):
+    certificate_id = models.AutoField(primary_key=True)
+    report_number = models.IntegerField(blank=True, null=True)
+    issue_date = models.DateField()
+    standard_id = models.ForeignKey(Standard, on_delete=models.DO_NOTHING, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    location = models.ForeignKey(Location, on_delete=models.DO_NOTHING, null=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.certificate_id

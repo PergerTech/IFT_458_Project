@@ -33,6 +33,7 @@ class ProfileForm(forms.ModelForm):
         fields = ('address', 'office_phone', 'cell_phone')
 
 
+
 class UserLogin(ModelForm):
     class Meta:
         fields = ['username', 'password']

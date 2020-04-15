@@ -1,13 +1,16 @@
+from django.db import transaction
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from .forms import *
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 import csv, io
 from datetime import datetime
 from SolarPV import models
+from rest_framework import viewsets
+from .serializer import CertificateSerializer, LocationSerializer, StandardSerializer, ServiceSerializer, ClientSerializer
 
 from SolarPV.models import Testresults, Product
 
@@ -52,22 +55,24 @@ def user_portal(request):
     return render(request, 'user_portal.html', context)
 
 
+@transaction.atomic
 def registerUser(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
-        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        profile_form = ProfileForm(request.POST)
         if form.is_valid() and profile_form.is_valid():
-            form.save()
+            user = form.save()
+            profile_form = profile_form.save(commit=False)
+            profile_form.user = user
             profile_form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
             return redirect('user created')
+        else:
+            return HttpResponse("Username already used")
     else:
+        logout(request)
         form = SignUpForm()
         profile_form = ProfileForm()
-    return render(request, 'user_registration.html', {'form': form, 'profile_form': profile_form})
+        return render(request, 'user_registration.html', {'form': form, 'profile_form': profile_form})
 
 
 def userCreated(request):
@@ -128,7 +133,7 @@ def upload_csv(request):
     template = 'upload_csv.html'
 
     prompt = {
-        'order': "Oder of CSV should be ..."
+        'order': 'CVS column order: Model, Test, Sequence, Condition, Test Date, Isc, Voc, Imp, Vmp, FF, Pmp, Noct'
     }
     # Return input view to user
     if request.method == "GET":
@@ -171,7 +176,30 @@ def upload_csv(request):
         return render(request, 'submit_success.html', context)
 
 
+# SolarPV API serializers
+
+class CertificateView(viewsets.ModelViewSet):
+    queryset = models.Certificate.objects.all()
+    serializer_class = CertificateSerializer
 
 
+class LocationView(viewsets.ModelViewSet):
+    queryset = models.Location.objects.all()
+    serializer_class = LocationSerializer
+
+
+class StandardView(viewsets.ModelViewSet):
+    queryset = models.Standard.objects.all()
+    serializer_class = StandardSerializer
+
+
+class ClientView(viewsets.ModelViewSet):
+    queryset = models.Client.objects.all()
+    serializer_class = ClientSerializer
+
+
+class ServiceView(viewsets.ModelViewSet):
+    queryset = models.Service.objects.all()
+    serializer_class = ServiceSerializer
 
 

@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb45fb5-72d6-436c-8d49-9b1ca3d8e5a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SolarPV/workbench.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/profiel_placeholder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SolarPV/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFT458_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/IFT458_Project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/productRegistration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/productRegistration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user_portal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_portal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/submit_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/submit_success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/upload_csv.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload_csv.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -160,7 +159,10 @@
       <workItem from="1584373994528" duration="44376000" />
       <workItem from="1584580903406" duration="44689000" />
       <workItem from="1585095171407" duration="28993000" />
-      <workItem from="1585592694164" duration="62239000" />
+      <workItem from="1585592694164" duration="69984000" />
+      <workItem from="1586110430369" duration="26664000" />
+      <workItem from="1586558598093" duration="2282000" />
+      <workItem from="1586725287085" duration="31316000" />
     </task>
     <servers />
   </component>
@@ -204,22 +206,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="672" y="257" key="SettingsEditor/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1583541596557" />
-    <state x="911" y="482" key="com.intellij.ide.util.TipDialog" timestamp="1585593325028">
+    <state x="911" y="482" key="com.intellij.ide.util.TipDialog" timestamp="1586725329275">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="911" y="482" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1585593325028" />
-    <state x="-2528" y="18" width="2492" height="1361" key="dock-window-1" timestamp="1586025249300">
+    <state x="911" y="482" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1586725329275" />
+    <state x="-2384" y="105" width="2253" height="1118" key="dock-window-1" timestamp="1586918989736">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-2528" y="18" width="2492" height="1361" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1586025249300" />
+    <state x="-2384" y="105" width="2253" height="1118" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1586918989736" />
     <state x="-1287" y="0" width="1294" height="1407" key="dock-window-2" timestamp="1584637829009">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
     <state x="-1287" y="0" width="1294" height="1407" key="dock-window-2/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584637829009" />
-    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1584748354442">
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup" timestamp="1586898276270">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584748354442" />
+    <state x="859" y="308" width="840" height="1034" key="search.everywhere.popup/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1586898276270" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -228,6 +230,11 @@
           <url>file://$PROJECT_DIR$/templates/user_portal.html</url>
           <line>68</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/SolarPV/models.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
