@@ -1,0 +1,32 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+
+    <br>
+    <div class="container">
+        <form action="" autocomplete="off" class="form-inline" method="GET" accept-charset="utf-8">
+            <div class="col-lg-2"><h3>Certificates</h3></div>
+            <div class="input-group mb-2 col-lg-10">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-success" type="submit" id="button-addon1">Search</button>
+                </div>
+                <input type="text" name='q' class="form-control" placeholder="Enter Product Number or Report Number" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+        </form>
+
+        <div class="row" style='font-weight: bold; border-bottom: solid black 1px; border-top: solid black 1px'>
+            <div class="col-md-3">Report Number</div>
+            <div class="col-md-3">Product Number</div>
+            <div class="col-md-3">Location</div>
+            <div class="col-md-3">Publish Date</div>
+        </div>
+        {% for cert in certificates %}
+            <div class="row">
+                <div class="col-md-3">{{ cert.report_number }}</div>
+                <div class="col-md-3">{{ cert.product }}</div>
+                <div class="col-md-3">{{ cert.location }}</div>
+                <div class="col-md-3">{{ cert.issue_date }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

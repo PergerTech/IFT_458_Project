@@ -11,7 +11,7 @@ from datetime import datetime
 from SolarPV import models
 from rest_framework import viewsets
 from .serializer import CertificateSerializer, LocationSerializer, StandardSerializer, ServiceSerializer, ClientSerializer
-
+from django.db.models import Q
 from SolarPV.models import Testresults, Product
 
 
@@ -58,21 +58,20 @@ def user_portal(request):
 @transaction.atomic
 def registerUser(request):
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        user_form = UserForm(request.POST)
         profile_form = ProfileForm(request.POST)
-        if form.is_valid() and profile_form.is_valid():
-            user = form.save()
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save()
             profile_form = profile_form.save(commit=False)
             profile_form.user = user
             profile_form.save()
             return redirect('user created')
-        else:
-            return HttpResponse("Username already used")
     else:
         logout(request)
-        form = SignUpForm()
+        user_form = UserForm()
         profile_form = ProfileForm()
-        return render(request, 'user_registration.html', {'form': form, 'profile_form': profile_form})
+    context = {'user_form': user_form, 'profile_form': profile_form}
+    return render(request, 'user_registration.html', context)
 
 
 def userCreated(request):
@@ -174,6 +173,23 @@ def upload_csv(request):
             )
         context = {}
         return render(request, 'submit_success.html', context)
+
+
+def certificates(request):
+    query = request.GET.get('q'.strip().lstrip())
+    print(query.isdigit())
+    if request.method == "GET" and query is not None:
+        if query.isdigit():
+            queryset = models.Certificate.objects.filter(Q(report_number__exact=query))
+        else:
+            queryset = models.Certificate.objects.filter(Q(product__model_number__icontains=query))
+
+        context = {"certificates": queryset}
+        return render(request, 'certificates.html', context)
+    else:
+        queryset = models.Certificate.objects.all()
+        context = {"certificates": queryset}
+        return render(request, 'certificates.html', context)
 
 
 # SolarPV API serializers

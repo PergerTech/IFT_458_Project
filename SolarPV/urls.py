@@ -23,5 +23,6 @@ urlpatterns = [
     path('upload_test', views.upload_csv, name='upload test'),
     path('user_created', views.userCreated, name='user created'),
     path('product/<int:product_id>', views.product, name='product view'),
-    path('api_index/', include(router.urls))
+    path('certificates', views.certificates, name='certificates'),
+    path('api_index/', include(router.urls)),
     ]

@@ -159,5 +159,8 @@ input[type=number] {
     padding-left: 15px;
 }
 
-
-
+/* Django Messages */
+.errorlist li {
+    color: red;
+    font-weight: bold;
+}

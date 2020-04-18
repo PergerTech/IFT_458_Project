@@ -99,16 +99,6 @@ class Testresults(models.Model):
         db_table = 'testresutls'
 
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    address = models.CharField(max_length=100, blank=True, null=True)
-    office_phone = PhoneField(blank=True, help_text='Office contact number')
-    cell_phone = PhoneField(blank=True, help_text='Cell contact number')
-
-    def __str__(self):
-        return self.user.username
-
-
 class Client(models.Model):
     choices = [('bad', 'bad client'), ('good', 'good client'), ('good client', 'really good client'), ('bad client', 'really bad client')]
     client_id = models.AutoField(primary_key=True)
@@ -117,6 +107,21 @@ class Client(models.Model):
 
     def __str__(self):
         return self.client_name
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    middle_name = models.CharField(max_length=50, blank=True, null=True)
+    job_title = models.CharField(max_length=80, blank=True, null=True)
+    address = models.CharField(max_length=100, blank=True, null=True)
+    office_phone = PhoneField(blank=True, help_text='Office contact number')
+    cell_phone = PhoneField(blank=True, help_text='Cell contact number')
+    prefix_choices = [('Mr', 'Mr'), ('Ms', 'Ms'), ('Mrs', 'Mrs'), ('Dr', 'Dr')]
+    prefix = models.CharField(max_length=4, choices=prefix_choices, default=None)
+    company = models.ForeignKey(Client, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user.username
 
 
 class Location(models.Model):
