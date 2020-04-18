@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb45fb5-72d6-436c-8d49-9b1ca3d8e5a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/certificates.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IFT458_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/IFT458_Project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFT458_Project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/IFT458_Project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarPV/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SolarPV/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/user_registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_registration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +161,7 @@
       <workItem from="1586110430369" duration="26664000" />
       <workItem from="1586558598093" duration="2282000" />
       <workItem from="1586725287085" duration="45475000" />
-      <workItem from="1587053351336" duration="31906000" />
+      <workItem from="1587053351336" duration="39463000" />
     </task>
     <servers />
   </component>

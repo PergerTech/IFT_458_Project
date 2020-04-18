@@ -2,6 +2,7 @@ from rest_framework import serializers
 from SolarPV import models
 
 
+# Standard Model Serializer Endpoints
 class CertificateSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Certificate

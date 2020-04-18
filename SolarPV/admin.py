@@ -25,3 +25,40 @@ class ProductAdmin(admin.ModelAdmin):
 
 admin.site.register(Product, ProductAdmin)
 
+
+# Client admin view
+class ClientAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Client, ClientAdmin)
+
+
+# Location admin view
+class LocationAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Location, LocationAdmin)
+
+
+# Standard admin view
+class StandardAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Standard, StandardAdmin)
+
+
+# Certificate admin view
+class CertificateAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Certificate, CertificateAdmin)
+
+
+
+admin.site.site_header = "SolarPV Admin Portal"
+admin.site.site_title = "SolarPV Admin"
+admin.site.index_title = "Welcome to SolarPV Staff Portal"

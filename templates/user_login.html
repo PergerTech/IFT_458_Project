@@ -1,16 +1,18 @@
 {% extends "base_template.html" %}
 
 {% block content %}
-<!-- Registration Form -->
-<br>
-<div id="form-wrapper" class="container">
+    <!-- Registration Form -->
     <br>
-    <h1>User Login</h1>
-    <hr/>
-    <form name="Manufacturer form" action="" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary" value="OK">Submit</button>
-    </form>
-</div>
+    <div id="form-wrapper" class="container">
+        <br>
+        <h1>User Login</h1>
+        <hr/>
+        <form name="Manufacturer form" action="" method="POST">
+            <table>
+                {% csrf_token %}
+                {{ form }}
+            </table>
+            <button type="submit" class="btn btn-primary" value="OK">Submit</button>
+        </form>
+    </div>
 {% endblock %}

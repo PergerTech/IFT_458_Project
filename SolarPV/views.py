@@ -29,13 +29,13 @@ def user_login(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.info(request, f"You are now logged in as {username}")
-                return HttpResponseRedirect('/user_portal')
-            else:
-                messages.error(request, "Invalid username or password.")
-        else:
-            messages.error(request, "Invalid username or password.")
-    form = AuthenticationForm()
+                if User.is_staff:
+                    return HttpResponseRedirect('/admin')
+                else:
+                    return HttpResponseRedirect('/user_portal')
+    else:
+        # messages.error(request, "Invalid username or password.")
+        form = AuthenticationForm()
     return render(request, "user_login.html", {"form": form})
 
 

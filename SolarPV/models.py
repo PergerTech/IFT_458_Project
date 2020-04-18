@@ -174,4 +174,4 @@ class Certificate(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return self.certificate_id
+        return self.report_number

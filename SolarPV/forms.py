@@ -1,5 +1,3 @@
-import itertools
-
 from django.forms import ModelForm
 from SolarPV import models
 from django.contrib.auth.models import User
@@ -19,6 +17,7 @@ class ManufacturerRegistration(ModelForm):
         fields = '__all__'
 
 
+# UserForm & ProfileForm are tied together to create an extend user model
 class UserForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=False)
     last_name = forms.CharField(max_length=30, required=False)
@@ -46,6 +45,7 @@ class TestData(ModelForm):
         fields = "__all__"
 
 
+# Search Bar for searching Certificate Model
 class SearchCertificates(ModelForm):
     class Meta:
         model = models.Certificate
