@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'IFT458_Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'solarpv',
+        'NAME': 'SolarPV',
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'jared',
+        'USER': 'jwaltisperger',
         'PASSWORD': 'Cowgirl28',
         'PORT': '3306'
 
