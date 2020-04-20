@@ -26,7 +26,7 @@ SECRET_KEY = 'ff1@w=1=o+g2kjcsy-#x@lat0bw&g@@4aks6tqvv)vk6y+u1#t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['104.248.59.12', 'localhost', '0.0.0.0']
 
 
 # Application definition
@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'IFT458_Project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'NAME': 'solarpv',
+        'NAME': 'SolarPV',
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'jared',
+        'USER': 'jwaltisperger',
         'PASSWORD': 'Cowgirl28',
         'PORT': '3306'
 
