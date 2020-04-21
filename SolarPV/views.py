@@ -27,8 +27,8 @@ def user_login(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
+            login(request, user)
             if user is not None:
-                login(request, user)
                 if User.is_staff:
                     return HttpResponseRedirect('/admin')
                 else:
