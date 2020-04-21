@@ -23,15 +23,16 @@ def index(request):
 def user_login(request):
     if request.method == 'POST':
         form = AuthenticationForm(request=request, data=request.POST)
+        logout(request)
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
             login(request, user)
             if user is not None:
-                if User.is_staff:
+                if request.user.is_staff:           
                     return HttpResponseRedirect('/admin')
-                else:
+                if request.user.is_authenticated():
                     return HttpResponseRedirect('/user_portal')
     else:
         # messages.error(request, "Invalid username or password.")

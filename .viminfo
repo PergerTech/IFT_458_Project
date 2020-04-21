@@ -18,7 +18,7 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1587489273,,"wq"
+|2,0,1587495547,,"wq"
 :q
 |2,0,1587488994,,"q"
 :q!
@@ -43,36 +43,54 @@ $
 # Registers:
 
 # File marks:
-'0  130  0  ~/IFT458_Project/settings.py
-|4,48,130,0,1587489273,"~/IFT458_Project/settings.py"
-'1  130  0  ~/IFT458_Project/settings.py
-|4,49,130,0,1587489247,"~/IFT458_Project/settings.py"
-'2  19  0  ~/IFT458_Project/settings.py
-|4,50,19,0,1587489178,"~/IFT458_Project/settings.py"
-'3  19  0  ~/IFT458_Project/settings.py
-|4,51,19,0,1587489178,"~/IFT458_Project/settings.py"
+'0  37  8  ~/SolarPV/views.py
+|4,48,37,8,1587495547,"~/SolarPV/views.py"
+'1  1  0  /usr/bin/gunicorn_start
+|4,49,1,0,1587493174,"/usr/bin/gunicorn_start"
+'2  130  0  ~/IFT458_Project/settings.py
+|4,50,130,0,1587489273,"~/IFT458_Project/settings.py"
+'3  130  0  ~/IFT458_Project/settings.py
+|4,51,130,0,1587489247,"~/IFT458_Project/settings.py"
 '4  19  0  ~/IFT458_Project/settings.py
 |4,52,19,0,1587489178,"~/IFT458_Project/settings.py"
 '5  19  0  ~/IFT458_Project/settings.py
 |4,53,19,0,1587489178,"~/IFT458_Project/settings.py"
-'6  26  45  ~/IFT458_Project/settings.py
-|4,54,26,45,1587489139,"~/IFT458_Project/settings.py"
-'7  26  45  ~/IFT458_Project/settings.py
-|4,55,26,45,1587489139,"~/IFT458_Project/settings.py"
+'6  19  0  ~/IFT458_Project/settings.py
+|4,54,19,0,1587489178,"~/IFT458_Project/settings.py"
+'7  19  0  ~/IFT458_Project/settings.py
+|4,55,19,0,1587489178,"~/IFT458_Project/settings.py"
 '8  26  45  ~/IFT458_Project/settings.py
 |4,56,26,45,1587489139,"~/IFT458_Project/settings.py"
 '9  26  45  ~/IFT458_Project/settings.py
 |4,57,26,45,1587489139,"~/IFT458_Project/settings.py"
 
 # Jumplist (newest first):
+-'  37  8  ~/SolarPV/views.py
+|4,39,37,8,1587495547,"~/SolarPV/views.py"
+-'  1  0  ~/SolarPV/views.py
+|4,39,1,0,1587495235,"~/SolarPV/views.py"
+-'  1  0  /usr/bin/gunicorn_start
+|4,39,1,0,1587493174,"/usr/bin/gunicorn_start"
+-'  1  0  /usr/bin/gunicorn_start
+|4,39,1,0,1587493174,"/usr/bin/gunicorn_start"
 -'  130  0  ~/IFT458_Project/settings.py
 |4,39,130,0,1587489273,"~/IFT458_Project/settings.py"
+-'  130  0  ~/IFT458_Project/settings.py
+|4,39,130,0,1587489273,"~/IFT458_Project/settings.py"
+-'  130  0  ~/IFT458_Project/settings.py
+|4,39,130,0,1587489247,"~/IFT458_Project/settings.py"
 -'  130  0  ~/IFT458_Project/settings.py
 |4,39,130,0,1587489247,"~/IFT458_Project/settings.py"
 -'  19  0  ~/IFT458_Project/settings.py
 |4,39,19,0,1587489201,"~/IFT458_Project/settings.py"
 -'  19  0  ~/IFT458_Project/settings.py
 |4,39,19,0,1587489201,"~/IFT458_Project/settings.py"
+-'  19  0  ~/IFT458_Project/settings.py
+|4,39,19,0,1587489201,"~/IFT458_Project/settings.py"
+-'  19  0  ~/IFT458_Project/settings.py
+|4,39,19,0,1587489201,"~/IFT458_Project/settings.py"
+-'  19  0  ~/IFT458_Project/settings.py
+|4,39,19,0,1587489178,"~/IFT458_Project/settings.py"
 -'  19  0  ~/IFT458_Project/settings.py
 |4,39,19,0,1587489178,"~/IFT458_Project/settings.py"
 -'  26  45  ~/IFT458_Project/settings.py
@@ -81,6 +99,14 @@ $
 |4,39,26,45,1587489162,"~/IFT458_Project/settings.py"
 -'  26  45  ~/IFT458_Project/settings.py
 |4,39,26,45,1587489162,"~/IFT458_Project/settings.py"
+-'  26  45  ~/IFT458_Project/settings.py
+|4,39,26,45,1587489162,"~/IFT458_Project/settings.py"
+-'  26  45  ~/IFT458_Project/settings.py
+|4,39,26,45,1587489162,"~/IFT458_Project/settings.py"
+-'  26  45  ~/IFT458_Project/settings.py
+|4,39,26,45,1587489162,"~/IFT458_Project/settings.py"
+-'  26  45  ~/IFT458_Project/settings.py
+|4,39,26,45,1587489139,"~/IFT458_Project/settings.py"
 -'  26  45  ~/IFT458_Project/settings.py
 |4,39,26,45,1587489139,"~/IFT458_Project/settings.py"
 -'  1  0  ~/IFT458_Project/settings.py
@@ -91,6 +117,46 @@ $
 |4,39,1,0,1587489014,"~/IFT458_Project/settings.py"
 -'  1  0  ~/IFT458_Project/settings.py
 |4,39,1,0,1587489014,"~/IFT458_Project/settings.py"
+-'  1  0  ~/IFT458_Project/settings.py
+|4,39,1,0,1587489014,"~/IFT458_Project/settings.py"
+-'  1  0  ~/IFT458_Project/settings.py
+|4,39,1,0,1587489014,"~/IFT458_Project/settings.py"
+-'  1  0  ~/IFT458_Project/settings.py
+|4,39,1,0,1587489014,"~/IFT458_Project/settings.py"
+-'  1  0  ~/IFT458_Project/settings.py
+|4,39,1,0,1587489014,"~/IFT458_Project/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
+-'  1  0  ~/settings.py
+|4,39,1,0,1587488994,"~/settings.py"
 -'  1  0  ~/settings.py
 |4,39,1,0,1587488994,"~/settings.py"
 -'  1  0  ~/settings.py
@@ -187,86 +253,36 @@ $
 |4,39,10,0,1587485875,"/etc/systemd/system/gunicorn.service"
 -'  10  0  /etc/systemd/system/gunicorn.service
 |4,39,10,0,1587485875,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  1  0  /etc/systemd/system/gunicorn.service
-|4,39,1,0,1587485839,"/etc/systemd/system/gunicorn.service"
--'  36  0  ~/
-|4,39,36,0,1587485686,"~/"
--'  36  0  ~/
-|4,39,36,0,1587485686,"~/"
--'  36  0  ~/
-|4,39,36,0,1587485686,"~/"
--'  36  0  ~/
-|4,39,36,0,1587485686,"~/"
--'  36  0  ~/
-|4,39,36,0,1587485686,"~/"
--'  36  0  ~/
-|4,39,36,0,1587485686,"~/"
--'  36  0  ~/
-|4,39,36,0,1587485686,"~/"
+-'  10  0  /etc/systemd/system/gunicorn.service
+|4,39,10,0,1587485875,"/etc/systemd/system/gunicorn.service"
+-'  10  0  /etc/systemd/system/gunicorn.service
+|4,39,10,0,1587485875,"/etc/systemd/system/gunicorn.service"
+-'  10  0  /etc/systemd/system/gunicorn.service
+|4,39,10,0,1587485875,"/etc/systemd/system/gunicorn.service"
+-'  10  0  /etc/systemd/system/gunicorn.service
+|4,39,10,0,1587485875,"/etc/systemd/system/gunicorn.service"
+-'  10  0  /etc/systemd/system/gunicorn.service
+|4,39,10,0,1587485875,"/etc/systemd/system/gunicorn.service"
+-'  10  0  /etc/systemd/system/gunicorn.service
+|4,39,10,0,1587485875,"/etc/systemd/system/gunicorn.service"
 
 # History of marks within files (newest to oldest):
+
+> ~/SolarPV/views.py
+	*	1587495544	0
+	"	37	8
+	^	37	9
+	.	35	50
+	+	27	0
+	+	26	22
+	+	33	47
+	+	34	0
+	+	33	40
+	+	35	50
+
+> /usr/bin/gunicorn_start
+	*	1587493174	0
+	"	1	0
 
 > ~/IFT458_Project/settings.py
 	*	1587489271	0

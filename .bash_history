@@ -271,3 +271,156 @@ reboot
 systemctl reboot -i
 ls
 exit
+cd /home/jwaltisperger/logs
+ls
+cat nginx-error.log 
+ls
+cat gunicorn-error.log 
+ls
+cat nginx-access.log 
+cd ..
+ls
+/bin/gunicorn 
+ls bin
+gunicorn_start 
+ls -la
+gunicorn_start 
+ls
+vi /bin/gunicorn_start
+ls
+/home
+cd /home
+cd jwaltisperger/
+ls
+source /bin/activate
+ls bin
+source /bin/activate
+pwd
+cd bin
+source activate
+cd ..
+ls
+sudo systemctl status gunicorn
+sudo vi /etc/systemd/system/gunicorn.service
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+sudo vi /etc/systemd/system/gunicorn.service
+sudo systemctl enable gunicorn
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+ls
+touch /home/jwaltisperger/bin/gunicorn
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+cd /home/jwaltisperger/bin/
+ls
+sudo rm gunicorn
+ls
+mkdir gunicorn
+ls
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl start gunicorn
+sudo systemctl status gunicorn
+chmond x+u gunicorn
+chmod x+u gunicorn
+chmod u gunicorn
+chmod +u gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl start gunicorn
+sudo systemctl status gunicorn
+cd home
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+ls bin
+ls
+cd bin
+pwd
+vi /home/jwaltisperger/
+vi /home/jwaltisperger
+cd /home/jwaltisperger/
+ls
+ls local/
+ls local/bin
+cat local
+vi /etc/systemd/system/gunicorn.service 
+sudo vi /etc/systemd/system/gunicorn.service 
+sudo systemctl start gunicorn
+systemctl daemon-reload
+sudo systemctl enabl gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+system systemctl status gunicorn
+sudo systemctl status gunicorn
+sudo vi /etc/systemd/system/gunicorn.service 
+sudo systemctl start gunicorn
+systemctl daemon-reload
+sudo sytemctl start gunicorn
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+sudo vi /etc/systemd/system/gunicorn.service 
+systemctl daemon-reload
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+ls
+sudo systemctl daemon-reload
+sudo systemctl restart gunicorn
+sudo systemctl status gunicorn
+sudo nano /etc/nginx/sites-available/IFT458_Project
+sudo cat /etc/nginx/sites-available/IFT458_Project
+sudo ls /etc/nginx/sites-available/IFT458_Project
+sudo ls /etc/nginx/sites-available/
+rm ls /etc/nginx/sites-available/SolarPV
+sudo rm -r /etc/nginx/sites-available/SolarPV
+sudo ls /etc/nginx/sites-available/
+sudo ln -s /etc/nginx/sites-available/IFT458_Project /etc/nginx/sites-enabled/
+sudo ln /etc/nginx/sites-enabled/
+sudo ls /etc/nginx/sites-enabled/
+sudo rm /etc/nginx/sites-enabled/SolarPV
+sudo ls /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo nano /etc/nginx/sites-available/IFT458_Project
+sudo nginx -t
+sudo nano /etc/nginx/sites-available/IFT458_Project
+sudo nginx -t
+sudo sytemctl restart nginx
+sudo systemctl restart nginx
+sudo systemctl status gunicorn
+python manage.py makesuperuser
+python manage.py createsuperuser
+ls
+cd IFT458_Project/
+ls
+cat settings.py 
+python manage.py collectstatic
+cd ..
+python manage.py collectstatic
+vi settings.py 
+ls
+vi IFT458_Project/settings.py 
+python manage.py collectstatic
+vi IFT458_Project/settings.py 
+python manage.py collectstatic
+vi IFT458_Project/settings.py 
+python manage.py collectstatic
+vi IFT458_Project/settings.py 
+python manage.py collectstatic
+ls
+pwed
+pwd
+git add .
+git commit -m "setup nginx, gunicorn"
+git push
+git pull
