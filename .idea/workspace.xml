@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb45fb5-72d6-436c-8d49-9b1ca3d8e5a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/22026241-1621-4c37-b5ec-19bc5bdac2ea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/22026241-1621-4c37-b5ec-19bc5bdac2ea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/submit_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/submit_success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/admin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,14 +59,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programing_workspace\IFT458\IFT458_Project" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Programing_workspace\IFT458\IFT458_Project\static" />
       <recent name="C:\Programing_workspace\IFT458\IFT458_Project\SolarPV" />
       <recent name="C:\Programing_workspace\IFT458\IFT458_Project" />
       <recent name="C:\Programing_workspace\IFT458\IFT458_Project\SolarPV\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Programing_workspace\IFT458\IFT458_Project" />
     </key>
   </component>
   <component name="RunManager" selected="Python.workbench">
@@ -155,7 +155,8 @@
       <workItem from="1586558598093" duration="2282000" />
       <workItem from="1586725287085" duration="45475000" />
       <workItem from="1587053351336" duration="39463000" />
-      <workItem from="1587514199282" duration="176000" />
+      <workItem from="1587514199282" duration="2862000" />
+      <workItem from="1587569583151" duration="917000" />
     </task>
     <servers />
   </component>
@@ -199,14 +200,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="672" y="257" key="SettingsEditor/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1583541596557" />
-    <state x="911" y="482" key="com.intellij.ide.util.TipDialog" timestamp="1586725329275">
+    <state x="911" y="482" key="com.intellij.ide.util.TipDialog" timestamp="1587569765114">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="911" y="482" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1586725329275" />
-    <state x="-2235" y="0" width="2251" height="1063" key="dock-window-1" timestamp="1587090719187">
+    <state x="911" y="482" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1587569765114" />
+    <state x="-1288" y="-8" width="1296" height="1416" key="dock-window-1" timestamp="1587570100367">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-2235" y="0" width="2251" height="1063" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1587090719187" />
+    <state x="-1288" y="-8" width="1296" height="1416" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1587570100367" />
     <state x="-1287" y="0" width="1294" height="1407" key="dock-window-2" timestamp="1584637829009">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
