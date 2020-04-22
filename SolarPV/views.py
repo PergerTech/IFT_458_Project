@@ -32,7 +32,7 @@ def user_login(request):
             if user is not None:
                 if request.user.is_staff:           
                     return HttpResponseRedirect('/admin')
-                if request.user.is_authenticated():
+                if request.user.is_authenticated:
                     return HttpResponseRedirect('/user_portal')
     else:
         # messages.error(request, "Invalid username or password.")
