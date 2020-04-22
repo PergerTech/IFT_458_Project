@@ -21,7 +21,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ff1@w=1=o+g2kjcsy-#x@lat0bw&g@@4aks6tqvv)vk6y+u1#t'
+with open('/etc/secret_key.txt') as f:
+    SECRET_KEY = f.read().strip().lstrip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
