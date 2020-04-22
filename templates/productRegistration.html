@@ -9,6 +9,7 @@
     <h1>Module Detailed Specification Register</h1>
     <hr/>
     <form name="MSD_form" action="" method="POST">
+	    {% csrf_token %}
         {{ product_form.as_p }}
         <button type="submit" class="btn btn-primary" value="OK">Submit</button>
     </form>

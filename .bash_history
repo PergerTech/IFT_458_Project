@@ -424,3 +424,4 @@ git add .
 git commit -m "setup nginx, gunicorn"
 git push
 git pull
+sudo mysql
