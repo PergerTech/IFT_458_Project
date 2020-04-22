@@ -10,6 +10,7 @@
 .sudo_as_admin_successful
 .cloud-locale-test.skip
 .idea
+.idea/workspace.xml
 
 ### Django ###
 *.log
