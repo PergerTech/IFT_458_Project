@@ -166,7 +166,7 @@ class Service(models.Model):
 
 class Certificate(models.Model):
     certificate_id = models.AutoField(primary_key=True)
-    report_number = models.CharField(blank=True, null=True)
+    report_number = models.CharField(blank=True, null=True, max_length=12)
     issue_date = models.DateField()
     standard_id = models.ForeignKey(Standard, on_delete=models.DO_NOTHING, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
