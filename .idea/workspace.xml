@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb45fb5-72d6-436c-8d49-9b1ca3d8e5a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFT458_Project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/IFT458_Project/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -156,7 +156,7 @@
       <workItem from="1586725287085" duration="45475000" />
       <workItem from="1587053351336" duration="39463000" />
       <workItem from="1587514199282" duration="2862000" />
-      <workItem from="1587569583151" duration="8586000" />
+      <workItem from="1587569583151" duration="10709000" />
     </task>
     <servers />
   </component>
