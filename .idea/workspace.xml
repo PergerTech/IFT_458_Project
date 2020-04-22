@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6eb45fb5-72d6-436c-8d49-9b1ca3d8e5a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SolarPV/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/admin.py" afterDir="false" />
-    </list>
+    <list default="true" id="6eb45fb5-72d6-436c-8d49-9b1ca3d8e5a2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +153,7 @@
       <workItem from="1586725287085" duration="45475000" />
       <workItem from="1587053351336" duration="39463000" />
       <workItem from="1587514199282" duration="2862000" />
-      <workItem from="1587569583151" duration="2243000" />
+      <workItem from="1587569583151" duration="2921000" />
     </task>
     <servers />
   </component>
