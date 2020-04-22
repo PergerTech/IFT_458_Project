@@ -20,9 +20,19 @@ class ManufacturerAdmin(admin.ModelAdmin):
 admin.site.register(Manufacturer, ManufacturerAdmin)
 
 
+# Testlab admin view
+class TestlabAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Testlab, TestlabAdmin)
+
+
 # Product admin view
 class ProductAdmin(admin.ModelAdmin):
-    pass
+    fields = ('model_number', 'manufacture', 'manufacturing_date', 'cell_technology', 'rated_voc')
+    list_display = ('model_number', 'manufacturer')
+    list_filter = ('manufacturer', 'cell_technology')
 
 
 admin.site.register(Product, ProductAdmin)
@@ -59,8 +69,7 @@ class CertificateAdmin(admin.ModelAdmin):
 
 admin.site.register(Certificate, CertificateAdmin)
 
-
-
+# customizing django admin portal view
 admin.site.site_header = "SolarPV Admin Portal"
 admin.site.site_title = "SolarPV Admin"
 admin.site.index_title = "Welcome to SolarPV Staff Portal"
