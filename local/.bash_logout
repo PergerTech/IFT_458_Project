@@ -1,0 +1,1 @@
+/home/jwaltisperger/.bash_logout

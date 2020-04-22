@@ -15,7 +15,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -26,7 +26,11 @@ SECRET_KEY = 'ff1@w=1=o+g2kjcsy-#x@lat0bw&g@@4aks6tqvv)vk6y+u1#t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['157.245.138.230']
+=======
+ALLOWED_HOSTS = ['104.248.59.12', 'localhost', '0.0.0.0']
+>>>>>>> deployment
 
 
 # Application definition
@@ -125,7 +129,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '/IFT458_Project/static',
+    'static',
 ]
 
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
