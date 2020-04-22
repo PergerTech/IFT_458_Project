@@ -1,6 +1,16 @@
 # Created by https://www.gitignore.io/api/django,python,windows
 # Edit at https://www.gitignore.io/?templates=django,python,windows
 
+# bash / linux
+.profile
+.bash_logout
+.bash_history
+.vim
+.viminfo
+.sudo_as_admin_successful
+.cloud-locale-test.skip
+.idea
+
 ### Django ###
 *.log
 *.pot

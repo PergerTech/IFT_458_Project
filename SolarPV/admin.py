@@ -31,7 +31,7 @@ admin.site.register(Testlab, TestlabAdmin)
 # Product admin view
 class ProductAdmin(admin.ModelAdmin):
     fields = ('model_number', 'manufacture', 'manufacturing_date', 'cell_technology', 'rated_voc')
-    list_display = ('model_number', 'manufacturer')
+    list_display = ('model_number', 'manufacturer', 'cell_technology')
     list_filter = ('manufacturer', 'cell_technology')
 
 
