@@ -12,6 +12,7 @@ admin.site.register(Profile, ProfileAdmin)
 
 # Manufacturer admin view
 class ManufacturerAdmin(admin.ModelAdmin):
+    list_display = ('company_name', 'contact_person', 'registered_country')
     fields = ('company_name', 'contact_person', 'registered_country')
     list_filter = ('company_name', 'manufacturer_id', 'registered_country')
 
