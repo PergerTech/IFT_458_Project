@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6eb45fb5-72d6-436c-8d49-9b1ca3d8e5a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SolarPV/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/SolarPV/forms.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,6 +157,8 @@
       <workItem from="1587053351336" duration="39463000" />
       <workItem from="1587514199282" duration="2862000" />
       <workItem from="1587569583151" duration="8586000" />
+      <workItem from="1588281162528" duration="3028000" />
+      <workItem from="1590170764223" duration="1000" />
     </task>
     <servers />
   </component>
@@ -204,10 +206,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="911" y="482" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1587569765114" />
-    <state x="-1288" y="-8" width="1296" height="1416" key="dock-window-1" timestamp="1587570100367">
+    <state x="-2225" y="0" width="2241" height="936" key="dock-window-1" timestamp="1587595675999">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="-1288" y="-8" width="1296" height="1416" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1587570100367" />
+    <state x="-2225" y="0" width="2241" height="936" key="dock-window-1/0.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1587595675999" />
     <state x="-1287" y="0" width="1294" height="1407" key="dock-window-2" timestamp="1584637829009">
       <screen x="-2560" y="0" width="2560" height="1400" />
     </state>
